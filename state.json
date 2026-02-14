@@ -1,11 +1,19 @@
 {
   "projectId": "ckbfirmcom-test2",
   "status": "running",
-  "phase": "scrape",
+  "phase": "harvest",
   "progress": {},
   "caches": {},
   "outputs": {
-    "repoUrl": "https://github.com/flexos-projects/ckbfirmcom-test2"
+    "repoUrl": "https://github.com/flexos-projects/ckbfirmcom-test2",
+    "harvestFiles": [
+      "ckbfirmcom-test2/harvest/firecrawl.json",
+      "ckbfirmcom-test2/harvest/visual-harvest.md",
+      "ckbfirmcom-test2/harvest/content-harvest.md",
+      "ckbfirmcom-test2/harvest/data.json",
+      "ckbfirmcom-test2/harvest/assets.json",
+      "ckbfirmcom-test2/harvest/research.md"
+    ]
   },
   "errors": [],
   "startedAt": "2026-02-14T12:16:10.421Z"

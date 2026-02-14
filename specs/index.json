@@ -1,0 +1,112 @@
+{
+  "projectId": "ckbfirmcom-test2",
+  "generatedAt": "2026-02-14T12:25:43.403Z",
+  "specs": [
+    {
+      "file": "01-vision.md",
+      "title": "1. Vision: The CKB Firm Rebirth",
+      "sections": [
+        "1. Vision: The CKB Firm Rebirth",
+        "Brand Essence & Transformation Story",
+        "Core Value Proposition",
+        "Emotional Territory",
+        "Success Metrics"
+      ],
+      "wordCount": 733,
+      "valid": true
+    },
+    {
+      "file": "02-features.md",
+      "title": "2. Features: The CKB Firm Website",
+      "sections": [
+        "2. Features: The CKB Firm Website",
+        "User-Facing Functionality",
+        "Admin/CMS Requirements",
+        "Integration Needs"
+      ],
+      "wordCount": 956,
+      "valid": true
+    },
+    {
+      "file": "03-pages.md",
+      "title": "3. Pages: The CKB Firm Website Content Specification",
+      "sections": [
+        "3. Pages: The CKB Firm Website Content Specification",
+        "1. Homepage (`/`)",
+        "2. About Us Page (`/about`)",
+        "3. Services Overview Page (`/services`)",
+        "4. Specific Service Page: Commercial Litigation (`/services/commercial-litigation`)",
+        "5. Attorneys Overview Page (`/attorneys`)",
+        "6. Specific Attorney Profile Page: Michael S. Baim (`/attorneys/michael-s-baim`)",
+        "7. Insights Overview Page (`/insights`)",
+        "8. Specific Insight Article Page (`/insights/[article-slug]`)",
+        "9. Contact Us Page (`/contact`)",
+        "10. Privacy Policy Page (`/privacy-policy`)",
+        "11. Terms of Service Page (`/terms-of-service`)"
+      ],
+      "wordCount": 4540,
+      "valid": false
+    },
+    {
+      "file": "04-content-schema.md",
+      "title": "4. Content Schema: The CKB Firm Website",
+      "sections": [
+        "4. Content Schema: The CKB Firm Website",
+        "1. Global Settings (Singleton)",
+        "2. Page (Flexible Content Blocks)",
+        "3. Attorney",
+        "4. Service",
+        "5. Insight (Blog Post)",
+        "6. Testimonial",
+        "7. Affiliation",
+        "Shared Components (Reusable Objects/Components in CMS)",
+        "SEO Requirements for CMS Implementation"
+      ],
+      "wordCount": 1287,
+      "valid": true
+    },
+    {
+      "file": "05-flows.md",
+      "title": "5. Flows: The CKB Firm Website",
+      "sections": [
+        "5. Flows: The CKB Firm Website",
+        "1. User Journeys",
+        "2. Conversion Paths",
+        "3. Navigation Patterns",
+        "4. Error States"
+      ],
+      "wordCount": 1374,
+      "valid": true
+    },
+    {
+      "file": "06-design.md",
+      "title": "6. Design: The CKB Firm Website",
+      "sections": [
+        "6. Design: The CKB Firm Website",
+        "1. Design Tokens",
+        "2. Component Specifications",
+        "3. Animation Guidelines",
+        "4. Responsive Breakpoints"
+      ],
+      "wordCount": 1372,
+      "valid": false
+    },
+    {
+      "file": "07-technical.md",
+      "title": "7. Technical: The CKB Firm Website",
+      "sections": [
+        "7. Technical: The CKB Firm Website",
+        "1. Tech Stack Decisions",
+        "2. Performance Requirements",
+        "3. SEO Implementation",
+        "4. Analytics Setup"
+      ],
+      "wordCount": 969,
+      "valid": true
+    }
+  ],
+  "totals": {
+    "sections": 46,
+    "words": 11231
+  }
+}

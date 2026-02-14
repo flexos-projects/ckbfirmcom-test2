@@ -1,7 +1,7 @@
 {
   "projectId": "ckbfirmcom-test2",
-  "status": "running",
-  "phase": "build",
+  "status": "complete",
+  "phase": "complete",
   "progress": {},
   "caches": {},
   "outputs": {
@@ -30,6 +30,15 @@
       "ckbfirmcom-test2/site/public/.gitkeep"
     ]
   },
-  "errors": [],
-  "startedAt": "2026-02-14T12:16:10.421Z"
+  "errors": [
+    {
+      "phase": "deploy",
+      "task": "deploy-workflow",
+      "error": "Deployment task failed: Error: Failed to trigger deployment: The provided GitHub repository does not contain the requested branch or commit reference. Please ensure the repository is not empty.",
+      "timestamp": "2026-02-14T14:00:04.890Z",
+      "recovered": false
+    }
+  ],
+  "startedAt": "2026-02-14T12:16:10.421Z",
+  "completedAt": "2026-02-14T14:00:04.890Z"
 }

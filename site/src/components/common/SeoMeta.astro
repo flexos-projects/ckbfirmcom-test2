@@ -1,0 +1,63 @@
+---
+import type { ImageMetadata } from 'astro';
+
+// Define the props interface based on the SeoMeta Component schema from 04-content-schema.md
+interface Props {
+  metaTitle: string;
+  metaDescription: string;
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string | ImageMetadata; // Allow for direct URL or Astro ImageMetadata
+  noIndex?: boolean;
+}
+
+const {
+  metaTitle,
+  metaDescription,
+  canonicalUrl,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  noIndex = false,
+} = Astro.props;
+
+// Site-wide details, ideally fetched from Global Settings in a layout and passed down
+const siteName = "The CKB Firm";
+const defaultOgTitle = ogTitle || metaTitle;
+const defaultOgDescription = ogDescription || metaDescription;
+
+// Resolve image URL if it's ImageMetadata
+let ogImageUrl: string | undefined;
+if (ogImage) {
+  if (typeof ogImage === 'string') {
+    ogImageUrl = ogImage;
+  } else if (ogImage.src) {
+    // This assumes Astro ImageMetadata has a 'src' property
+    ogImageUrl = ogImage.src;
+  }
+}
+
+// Determine Twitter card type based on whether an image is present
+const twitterCardType = ogImageUrl ? 'summary_large_image' : 'summary';
+---
+
+<title>{metaTitle}</title>
+<meta name="description" content={metaDescription} />
+
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+{noIndex && <meta name="robots" content="noindex" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={defaultOgTitle} />
+<meta property="og:description" content={defaultOgDescription} />
+{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content={twitterCardType} />
+<meta name="twitter:title" content={defaultOgTitle} />
+<meta name="twitter:description" content={defaultOgDescription} />
+{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}

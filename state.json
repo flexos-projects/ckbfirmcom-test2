@@ -1,7 +1,7 @@
 {
   "projectId": "ckbfirmcom-test2",
   "status": "running",
-  "phase": "harvest",
+  "phase": "spec",
   "progress": {},
   "caches": {},
   "outputs": {
@@ -13,6 +13,18 @@
       "ckbfirmcom-test2/harvest/data.json",
       "ckbfirmcom-test2/harvest/assets.json",
       "ckbfirmcom-test2/harvest/research.md"
+    ],
+    "specFiles": [
+      "ckbfirmcom-test2/specs/01-vision.md",
+      "ckbfirmcom-test2/specs/02-features.md",
+      "ckbfirmcom-test2/specs/03-pages.md",
+      "ckbfirmcom-test2/specs/04-content-schema.md",
+      "ckbfirmcom-test2/specs/05-flows.md",
+      "ckbfirmcom-test2/specs/06-design.md",
+      "ckbfirmcom-test2/specs/07-technical.md",
+      "ckbfirmcom-test2/specs/tokens.json",
+      "ckbfirmcom-test2/specs/tokens.css",
+      "ckbfirmcom-test2/specs/tailwind-tokens.js"
     ]
   },
   "errors": [],

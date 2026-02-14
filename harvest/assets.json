@@ -1,6 +1,6 @@
 {
   "projectId": "ckbfirmcom-test2",
-  "generatedAt": "2026-02-14T12:19:13.436Z",
+  "generatedAt": "2026-02-14T12:19:44.056Z",
   "summary": {
     "totalAssets": 1,
     "harvest": 0,
@@ -16,22 +16,22 @@
       "filename": "ajax-loader.gif",
       "fileType": "gif",
       "foundOnPage": "https://www.ckbfirm.com/?page_id=18",
-      "quality": "medium",
+      "quality": "low",
       "authenticity": "stock",
       "action": "ignore",
       "priority": "low",
-      "notes": "Generic loading spinner from a WordPress plugin. Not a brand asset. Should be replaced by a modern CSS spinner or a custom, branded loading animation during the rebuild."
+      "notes": "Standard animated loading spinner from a WordPress plugin (Contact Form 7). This asset will be inherently replaced by a new theme or form solution and holds no unique brand value."
     }
   ],
   "photographyBrief": {
     "needed": true,
     "shots": [
-      "Professional headshots and group shots of all attorneys, showcasing professionalism and approachability.",
-      "Interior shots of the firm's office space, including reception areas, meeting rooms, and attorney offices, to convey a professional and welcoming environment.",
-      "Exterior shots of the firm's building/location, if distinctive, to establish a sense of place.",
-      "Candid shots of attorneys collaborating or engaged in work to demonstrate team cohesion and active practice."
+      "Professional headshots of all team members, consistent style and background",
+      "Candid shots of team members collaborating or in a professional office setting",
+      "Exterior and interior shots of the firm's office, highlighting key features and professional environment",
+      "Environmental portraits of key attorneys, showcasing their expertise or personality in a relevant context"
     ],
-    "style": "Modern professional, authentic, well-lit, high-resolution, conveying trustworthiness and expertise without being overly formal or sterile.",
+    "style": "Authentic, professional, approachable yet authoritative, with clean lighting and compositions. Emphasize trust and competence. Avoid sterile or overly staged imagery.",
     "priority": "critical"
   },
   "stockRecommendations": {
@@ -42,9 +42,14 @@
   "generationNeeds": {
     "images": [
       {
-        "description": "Custom icons for 'Areas of Practice' and other service-related sections, designed in a style consistent with the new brand aesthetic.",
-        "purpose": "To visually break up text, enhance readability, and reinforce concepts for service offerings and key firm features.",
-        "priority": "medium"
+        "description": "Abstract background patterns or textures incorporating the evolved brand blue and red, along with sophisticated, modern complementary tones. These should replace the generic gray backgrounds.",
+        "purpose": "To create a more contemporary and branded visual foundation for various sections and enhance visual interest without relying on generic stock or photography where not needed.",
+        "priority": "high"
+      },
+      {
+        "description": "Custom icon set for 'Areas of Practice' and other service-related sections, designed in a clean, professional, and modern style that aligns with the evolved brand aesthetic. Focus on clarity and concept reinforcement.",
+        "purpose": "To break up text-heavy sections, improve readability, and visually represent key services and concepts.",
+        "priority": "high"
       }
     ],
     "videos": []

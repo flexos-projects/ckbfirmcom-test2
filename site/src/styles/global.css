@@ -1,244 +1,174 @@
-/*
-  Global Base Styles for The CKB Firm Website
-  Generated from design tokens and specifications.
-*/
+/* src/styles/global.css */
 
-/* 1. CSS Reset & Box Sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* 2. Font Imports (Assuming Google Fonts or similar CDN is used in BaseLayout for Inter and Trajan Pro 3) */
-/* If self-hosting, @font-face rules would go here. */
-
-/* 3. Design Tokens as CSS Variables */
+/* --- Design Tokens --- */
 :root {
-  /* Colors */
+  /* Colors from tokens.json and 06-design.md */
   --color-primary-blue: #2B5878;
   --color-primary-red: #8B2237;
   --color-accent-gold: #D4AF37;
+  --color-background-light: #F8F8F8;
+  --color-surface: #FFFFFF;
   --color-text-dark: #1A1A1A;
   --color-text-medium: #5C5C5C;
-  --color-background-light: #F8F8F8;
+  --color-border: #D1D5DB;
+  --color-error: #DC3545;
+  --color-success: #28A745;
+  --color-warning: #FFC107;
   --color-white: #FFFFFF;
-  --color-status-success: #28A745;
-  --color-status-error: #DC3545;
 
-  /* Typography - Font Families */
-  --font-family-heading: 'Trajan Pro 3', serif;
+  /* Typography from 06-design.md */
+  --font-family-heading: 'Playfair Display', serif; /* Trajan Pro 3 is typically licensed; Playfair Display is a suitable, freely available serif alternative. */
   --font-family-body: 'Inter', sans-serif;
+  --font-family-mono: monospace;
 
-  /* Typography - Font Weights */
+  /* Font Sizes (Desktop values from 06-design.md) */
+  --font-size-h1: 3.75rem; /* 60px */
+  --font-size-h2: 2.5rem;  /* 40px */
+  --font-size-h3: 1.75rem; /* 28px */
+  --font-size-h4: 1.25rem; /* 20px */
+  --font-size-body: 1rem;   /* 16px */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-micro: 0.75rem;  /* 12px */
+
+  /* Font Sizes (Mobile values from 06-design.md) */
+  --font-size-h1-mobile: 2.5rem; /* 40px */
+  --font-size-h2-mobile: 2rem;   /* 32px */
+  --font-size-h3-mobile: 1.5rem; /* 24px */
+
+  /* Font Weights from 06-design.md */
   --font-weight-light: 300;
-  --font-weight-regular: 400;
+  --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* Typography - Line Heights */
+  /* Line Heights from 06-design.md */
   --line-height-heading: 1.2;
   --line-height-body: 1.6;
   --line-height-tight: 1.1;
 
-  /* Typography - Letter Spacing */
+  /* Letter Spacing from 06-design.md */
   --letter-spacing-tight: -0.02em;
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.05em;
 
-  /* Typography - Font Sizes (Base 16px for rem conversion) */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem;    /* 16px */
-  --font-size-md: 1.25rem;  /* 20px */
-
-  --font-size-lg-mobile: 1.5rem;   /* H3 mobile: 24px */
-  --font-size-lg-desktop: 1.75rem; /* H3 desktop: 28px */
-
-  --font-size-xl-mobile: 2rem;     /* H2 mobile: 32px */
-  --font-size-xl-desktop: 2.5rem;  /* H2 desktop: 40px */
-
-  --font-size-xxl-mobile: 2.5rem;  /* H1 mobile: 40px */
-  --font-size-xxl-desktop: 3.75rem; /* H1 desktop: 60px */
-
-  /* Spacing (Base unit 16px for rem conversion) */
+  /* Spacing from 06-design.md */
   --spacing-xxs: 0.25rem; /* 4px */
-  --spacing-xs: 0.5rem;  /* 8px */
-  --spacing-sm: 1rem;    /* 16px */
-  --spacing-md: 1.5rem;  /* 24px */
-  --spacing-lg: 2rem;    /* 32px */
-  --spacing-xl: 3rem;    /* 48px */
-  --spacing-xxl: 4rem;   /* 64px */
-  --spacing-xxxl: 6rem;  /* 96px */
-  --spacing-xxxxl: 8rem; /* 128px */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+  --spacing-xxl: 4rem;    /* 64px */
+  --spacing-xxxl: 6rem;   /* 96px */
+  --spacing-xxxxl: 8rem;  /* 128px */
 
-  /* Border Radius */
+  /* Border Radius from 06-design.md */
   --border-radius-sm: 0.25rem; /* 4px */
   --border-radius-md: 0.5rem;  /* 8px */
   --border-radius-lg: 0.75rem; /* 12px */
   --border-radius-full: 9999px;
 
-  /* Shadows */
+  /* Shadows from 06-design.md */
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  /* Animation */
-  --animation-duration-fast: 200ms;
-  --animation-duration-normal: 600ms;
-  --animation-duration-slow: 1000ms;
-  --animation-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-easing-in: cubic-bezier(0.4, 0, 1, 1);
-  --animation-easing-out: cubic-bezier(0, 0, 0.2, 1);
-  --animation-easing-in-out: ease-in-out;
-  --animation-easing-ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 4. Base HTML Element Styles */
+/* Base styles for HTML elements */
 html {
-  font-size: 16px; /* Base for rem units */
-  scroll-behavior: smooth;
+  font-size: 100%; /* Ensures 1rem = 16px by default for accessibility */
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
+  margin: 0;
   font-family: var(--font-family-body);
-  font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
   line-height: var(--line-height-body);
   color: var(--color-text-dark);
   background-color: var(--color-background-light);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  -webkit-font-smoothing: antialiased; /* Improves font rendering on macOS/iOS */
+  -moz-osx-font-smoothing: grayscale; /* Improves font rendering on macOS/iOS */
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
-  color: var(--color-text-dark);
+  font-weight: var(--font-weight-bold); /* Default bold for headings as per design */
   line-height: var(--line-height-heading);
-  letter-spacing: var(--letter-spacing-tight);
-  margin-bottom: var(--spacing-sm); /* Default margin */
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-dark);
 }
 
 h1 {
-  font-size: var(--font-size-xxl-mobile); /* Mobile H1 */
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 h2 {
-  font-size: var(--font-size-xl-mobile); /* Mobile H2 */
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h2);
 }
 
 h3 {
-  font-size: var(--font-size-lg-mobile); /* Mobile H3 */
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h3);
 }
 
 h4 {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h4);
 }
 
 h5 {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body); /* Using body font size for H5 */
 }
 
 h6 {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-small); /* Using small font size for H6 */
 }
 
-/* Paragraphs */
+/* Mobile Heading Adjustments (Tablet breakpoint and below, as per 06-design.md) */
+@media (max-width: 767px) {
+  h1 {
+    font-size: var(--font-size-h1-mobile);
+  }
+  h2 {
+    font-size: var(--font-size-h2-mobile);
+  }
+  h3 {
+    font-size: var(--font-size-h3-mobile);
+  }
+}
+
 p {
-  margin-bottom: var(--spacing-sm);
-  line-height: var(--line-height-body);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
 }
 
-/* Links */
 a {
   color: var(--color-primary-blue);
   text-decoration: none;
-  transition: color var(--animation-duration-fast) var(--animation-easing-ease-out);
+  transition: color 0.2s ease-in-out;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: var(--color-primary-red);
   text-decoration: underline;
 }
 
-/* Images */
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Remove extra space below images */
+  display: block; /* Prevents extra space below images */
 }
 
-/* Lists */
-ul, ol {
-  margin-left: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
-}
-
-li {
-  margin-bottom: var(--spacing-xxs);
-  line-height: var(--line-height-body);
-}
-
-/* Blockquotes */
-blockquote {
-  font-size: var(--font-size-lg-mobile);
-  font-family: var(--font-family-heading);
-  line-height: var(--line-height-heading);
-  margin: var(--spacing-md) 0;
-  padding-left: var(--spacing-md);
-  border-left: 4px solid var(--color-accent-gold);
-  color: var(--color-text-dark);
-}
-@media (min-width: 768px) {
-  blockquote {
-    font-size: var(--font-size-lg-desktop);
-  }
-}
-
-
-/* Form elements basic reset - Tailwind will provide more specific styles */
-button, input, optgroup, select, textarea {
-  font-family: inherit; /* Inherit font from body */
-  font-size: 100%; /* Corrects font size not inheriting in all browsers */
-  line-height: 1.15; /* Corrects line height not inheriting in all browsers */
-  margin: 0; /* Removes default margin */
-}
-
-button, [type='button'], [type='reset'], [type='submit'] {
-  -webkit-appearance: button; /* Corrects inability to style clickable types in iOS and Safari */
-}
-
-/* Accessibility focus outline */
+/* Accessibility: Focus visible styling */
+/* Ensures keyboard users have clear indication of focused elements */
 :focus-visible {
   outline: 2px solid var(--color-accent-gold);
   outline-offset: 2px;
-}
-
-/* 5. Responsive Typography Adjustments */
-@media (min-width: 768px) { /* Tablet breakpoint from 06-design.md */
-  h1 {
-    font-size: var(--font-size-xxl-desktop); /* Desktop H1 */
-  }
-  h2 {
-    font-size: var(--font-size-xl-desktop); /* Desktop H2 */
-  }
-  h3 {
-    font-size: var(--font-size-lg-desktop); /* Desktop H3 */
-  }
 }

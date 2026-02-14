@@ -1,63 +1,64 @@
 ---
-import type { ImageMetadata } from 'astro';
+// This component manages SEO meta tags, Open Graph, and Twitter cards.
+// It should be placed in the <head> of your document.
 
-// Define the props interface based on the SeoMeta Component schema from 04-content-schema.md
-interface Props {
-  metaTitle: string;
-  metaDescription: string;
-  canonicalUrl?: string;
+export interface Props {
+  title: string;
+  description?: string;
+  canonicalURL?: string; // Optional: for canonicalizing URLs
   ogTitle?: string;
   ogDescription?: string;
-  ogImage?: string | ImageMetadata; // Allow for direct URL or Astro ImageMetadata
-  noIndex?: boolean;
+  ogImage?: string; // Full URL to image
+  ogImageType?: string; // e.g., 'image/jpeg', 'image/png'
+  ogImageAlt?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterSite?: string; // e.g., @ckbfirm
+  twitterCreator?: string; // e.g., @authorname
+  noIndex?: boolean; // Set to true to prevent indexing
 }
 
 const {
-  metaTitle,
-  metaDescription,
-  canonicalUrl,
-  ogTitle,
-  ogDescription,
-  ogImage,
+  title,
+  description = 'The CKB Firm provides sophisticated, strategic legal counsel in commercial litigation, creditors\' rights, and real estate, empowering Chicago\'s businesses to mitigate risk, seize opportunities, and build a resilient foundation for enduring success.',
+  canonicalURL = Astro.url.href,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = 'https://firebasestorage.googleapis.com/v0/b/ckbfirmcom-test2.appspot.com/o/ckb-firm-og-default.jpg?alt=media&token=YOUR_FIREBASE_STORAGE_TOKEN_HERE', // This URL should be replaced with a real, accessible default OG image from Firebase Storage.
+  ogImageType = 'image/jpeg',
+  ogImageAlt = 'The CKB Firm logo with Chicago skyline background, representing strategic legal partnership.',
+  twitterCard = 'summary_large_image',
+  twitterSite = '@CKBFirm', // Placeholder, update with actual Twitter handle if available.
+  twitterCreator,
   noIndex = false,
 } = Astro.props;
 
-// Site-wide details, ideally fetched from Global Settings in a layout and passed down
-const siteName = "The CKB Firm";
-const defaultOgTitle = ogTitle || metaTitle;
-const defaultOgDescription = ogDescription || metaDescription;
-
-// Resolve image URL if it's ImageMetadata
-let ogImageUrl: string | undefined;
-if (ogImage) {
-  if (typeof ogImage === 'string') {
-    ogImageUrl = ogImage;
-  } else if (ogImage.src) {
-    // This assumes Astro ImageMetadata has a 'src' property
-    ogImageUrl = ogImage.src;
-  }
-}
-
-// Determine Twitter card type based on whether an image is present
-const twitterCardType = ogImageUrl ? 'summary_large_image' : 'summary';
+// Ensure ogImage is a full URL, fallback to a generic placeholder if not provided or invalid
+// In a production environment, 'YOUR_FIREBASE_STORAGE_TOKEN_HERE' must be replaced with a valid token,
+// and 'ckb-firm-og-default.jpg' must exist in your Firebase Storage.
+const finalOgImage = ogImage.startsWith('http') ? ogImage : 'https://firebasestorage.googleapis.com/v0/b/ckbfirmcom-test2.appspot.com/o/ckb-firm-og-default.jpg?alt=media&token=YOUR_FIREBASE_STORAGE_TOKEN_HERE';
 ---
 
-<title>{metaTitle}</title>
-<meta name="description" content={metaDescription} />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
 
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-{noIndex && <meta name="robots" content="noindex" />}
+{noIndex && <meta name="robots" content="noindex, nofollow" />}
+{!noIndex && <meta name="robots" content="index, follow" />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content={defaultOgTitle} />
-<meta property="og:description" content={defaultOgDescription} />
-{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
-<meta property="og:site_name" content={siteName} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:image" content={finalOgImage} />
+<meta property="og:image:type" content={ogImageType} />
+<meta property="og:image:alt" content={ogImageAlt} />
 
 <!-- Twitter -->
-<meta name="twitter:card" content={twitterCardType} />
-<meta name="twitter:title" content={defaultOgTitle} />
-<meta name="twitter:description" content={defaultOgDescription} />
-{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+<meta property="twitter:card" content={twitterCard} />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={ogTitle} />
+<meta property="twitter:description" content={ogDescription} />
+<meta property="twitter:image" content={finalOgImage} />
+{twitterSite && <meta property="twitter:site" content={twitterSite} />}
+{twitterCreator && <meta property="twitter:creator" content={twitterCreator} />}

@@ -1,0 +1,84 @@
+---
+import type { Props as SeoMetaProps } from '../components/common/SeoMeta';
+import SeoMeta from '../components/common/SeoMeta.astro';
+
+// Define the props for the BaseLayout component.
+// It extends SeoMetaProps to easily pass SEO-related data.
+interface Props extends SeoMetaProps {}
+
+const {
+  title,
+  description,
+  canonicalURL,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogImageType,
+  ogImageAlt,
+  twitterCard,
+  twitterSite,
+  twitterCreator,
+  noIndex,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon - Ensure this path points to your actual favicon file -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Font Imports from Google Fonts (as per 06-design.md) -->
+    <!-- Playfair Display for headings, Inter for body and UI elements -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO Meta Tags Component -->
+    <SeoMeta
+      title={title}
+      description={description}
+      canonicalURL={canonicalURL}
+      ogTitle={ogTitle}
+      ogDescription={ogDescription}
+      ogImage={ogImage}
+      ogImageType={ogImageType}
+      ogImageAlt={ogImageAlt}
+      twitterCard={twitterCard}
+      twitterSite={twitterSite}
+      twitterCreator={twitterCreator}
+      noIndex={noIndex}
+    />
+
+    <!-- Global Styles - Imports CSS variables (design tokens) and applies base styles -->
+    <style is:global>
+      @import '../styles/global.css';
+
+      /* Additional global styles or overrides can be placed here if necessary */
+      /* These ensure the base font and background colors are applied consistently */
+      html {
+        font-family: var(--font-family-body);
+        color: var(--color-text-dark);
+        background-color: var(--color-background-light);
+        line-height: var(--line-height-body);
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh; /* Ensures body takes full viewport height */
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Slot for page content -->
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,44 @@
+---FILE: src/components/common/SeoMeta.astro---
+---
+import { Astro } from 'astro:env/server';
+
+interface Props {
+  metaTitle: string;
+  metaDescription: string;
+  canonicalUrl: string; // The absolute URL for the page
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string; // Firebase Storage URL for the Open Graph image
+  noIndex?: boolean;
+}
+
+const {
+  metaTitle,
+  metaDescription,
+  canonicalUrl,
+  ogTitle = metaTitle, // Default to metaTitle if not provided
+  ogDescription = metaDescription, // Default to metaDescription if not provided
+  ogImage, // This will be a Firebase Storage URL if provided via CMS
+  noIndex = false,
+} = Astro.props;
+---
+<title>{metaTitle}</title>
+<meta name="description" content={metaDescription} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={ogTitle} />
+<meta name="twitter:description" content={ogDescription} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}
+
+{noIndex && <meta name="robots" content="noindex, nofollow" />}
+---END FILE---

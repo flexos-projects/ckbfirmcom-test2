@@ -1,0 +1,125 @@
+{
+  "business": {
+    "legalName": "The CKB Firm",
+    "brandName": "The CKB Firm",
+    "tagline": "When Collections are Key to your Business",
+    "industry": "Legal Services",
+    "businessType": "Law Firm"
+  },
+  "contact": {
+    "primary": {
+      "phone": "+1 (312) 704-8510"
+    }
+  },
+  "locations": [
+    {
+      "name": "CKB Firm Office",
+      "type": "Office",
+      "address": {
+        "street": "125 S. Clark Street, Suite 1700",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60603",
+        "country": "USA"
+      },
+      "phone": "+1 (312) 704-8510"
+    }
+  ],
+  "team": [
+    {
+      "name": "Michael S. Baim",
+      "role": "Attorney",
+      "title": "Managing Partner",
+      "bioFacts": [
+        "Graduate of Chicago Kent College of Law, Chicago, Illinois",
+        "Undergraduate studies in Economics at University of Illinois, Champaign, Illinois",
+        "Practice area limited to commercial litigation, creditor/debtor actions, collections, real estate",
+        "Represents large and medium size publicly traded and privately held businesses",
+        "Bar Admissions: Illinois, 1990",
+        "Past Employment Positions: Managing Partner at Baim & Lepak, LLC., Law Offices of Michael S. Baim"
+      ],
+      "photoAvailable": false
+    },
+    {
+      "name": "Patricia Lepak",
+      "role": "Attorney",
+      "title": "Chief Compliance Officer",
+      "bioFacts": [
+        "Graduate of DePaul University, Chicago, Illinois",
+        "Undergraduate studies in English at University of Illinois, Champaign, Illinois",
+        "Practice area limited to commercial litigation, creditor/debtor actions, collections",
+        "Bar Admissions: Illinois, 1995",
+        "Past Employment Positions: Partner at Baim & Lepak, LLC., Law Offices of Michael S. Baim"
+      ],
+      "photoAvailable": false
+    },
+    {
+      "name": "Brian Berlin",
+      "role": "Attorney",
+      "title": "Senior Trial Attorney",
+      "bioFacts": [
+        "Graduate of The John Marshall Law School, Chicago, Illinois",
+        "Undergraduate studies in Political Science at University of Illinois",
+        "Extensive experience in Creditors Rights",
+        "Practice area limited to commercial litigation, creditor/debtor actions, collections, real estate",
+        "Represents several large and medium size publicly traded and privately held businesses",
+        "Bar Admissions: Illinois, 2008"
+      ],
+      "photoAvailable": false
+    }
+  ],
+  "services": [
+    {
+      "id": "service-commercial-litigation-business-commercial-law",
+      "name": "Business and Commercial Law",
+      "category": "Commercial Litigation",
+      "description": "Legal services related to business and commercial law matters."
+    },
+    {
+      "id": "service-commercial-litigation-breach-of-contract",
+      "name": "Breach of Contract",
+      "category": "Commercial Litigation",
+      "description": "Legal representation for breach of contract disputes."
+    },
+    {
+      "id": "service-commercial-litigation-counterclaim-defense",
+      "name": "Counterclaim Defense",
+      "category": "Commercial Litigation",
+      "description": "Defense services against counterclaims in commercial litigation."
+    },
+    {
+      "id": "service-creditors-rights-pre-suit",
+      "name": "Pre-suit Creditors’ Rights",
+      "category": "Creditors’ Rights",
+      "description": "Creditors' rights services provided before legal action is initiated."
+    },
+    {
+      "id": "service-creditors-rights-litigation",
+      "name": "Creditors’ Rights Litigation",
+      "category": "Creditors’ Rights",
+      "description": "Litigation services for enforcing creditors' rights."
+    },
+    {
+      "id": "service-creditors-rights-post-judgment",
+      "name": "Post Judgment Creditors’ Rights",
+      "category": "Creditors’ Rights",
+      "description": "Services to enforce creditors' rights after a judgment has been obtained."
+    },
+    {
+      "id": "service-real-estate-commercial-residential-closing",
+      "name": "Commercial and Residential Closing",
+      "category": "Real Estate",
+      "description": "Legal services for commercial and residential real estate closings."
+    }
+  ],
+  "proof": {
+    "partners": [
+      "Commercial Law League of America (CLLA)",
+      "The National Creditors Bar Association (NARCA)",
+      "The American Lawyers Quarterly (ALQ)",
+      "The Forwarder’s List",
+      "Illinois Creditors Bar Association (ILCBA)",
+      "The General Bar"
+    ]
+  }
+}

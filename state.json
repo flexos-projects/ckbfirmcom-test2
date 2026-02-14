@@ -1,7 +1,7 @@
 {
   "projectId": "ckbfirmcom-test2",
   "status": "running",
-  "phase": "spec",
+  "phase": "build",
   "progress": {},
   "caches": {},
   "outputs": {
@@ -25,6 +25,9 @@
       "ckbfirmcom-test2/specs/tokens.json",
       "ckbfirmcom-test2/specs/tokens.css",
       "ckbfirmcom-test2/specs/tailwind-tokens.js"
+    ],
+    "buildFiles": [
+      "ckbfirmcom-test2/site/public/.gitkeep"
     ]
   },
   "errors": [],

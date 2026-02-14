@@ -66,7 +66,7 @@ export default {
         'xl': designTokens.spacing.xl,   // 48px
         '2xl': designTokens.spacing['2xl'], // 64px
         '3xl': designTokens.spacing['3xl'], // 96px
-        'xxxxl': designTokens.spacing.xxxxl, // 128px
+        'xxxxl': designTokens.spacing.xxxxl, // 128px - This is a valid token name from the specs
       },
       borderRadius: {
         'sm': designTokens.borderRadius.sm,   // 4px

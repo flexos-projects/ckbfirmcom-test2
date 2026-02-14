@@ -49,6 +49,21 @@
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.05em;
 
+  /* Typography - Font Sizes (Base 16px for rem conversion) */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-md: 1.25rem;  /* 20px */
+
+  --font-size-lg-mobile: 1.5rem;   /* H3 mobile: 24px */
+  --font-size-lg-desktop: 1.75rem; /* H3 desktop: 28px */
+
+  --font-size-xl-mobile: 2rem;     /* H2 mobile: 32px */
+  --font-size-xl-desktop: 2.5rem;  /* H2 desktop: 40px */
+
+  --font-size-xxl-mobile: 2.5rem;  /* H1 mobile: 40px */
+  --font-size-xxl-desktop: 3.75rem; /* H1 desktop: 60px */
+
   /* Spacing (Base unit 16px for rem conversion) */
   --spacing-xxs: 0.25rem; /* 4px */
   --spacing-xs: 0.5rem;  /* 8px */

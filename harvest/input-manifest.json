@@ -1,0 +1,56 @@
+{
+  "projectId": "ckbfirmcom-test2",
+  "firecrawl": {
+    "source": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/firecrawl.json",
+    "localPath": "ckbfirmcom-test2/harvest/firecrawl.json",
+    "pageCount": 9
+  },
+  "screenshots": [
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-0.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-0.png",
+      "filename": "screenshot-0.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-1.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-1.png",
+      "filename": "screenshot-1.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-2.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-2.png",
+      "filename": "screenshot-2.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-3.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-3.png",
+      "filename": "screenshot-3.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-4.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-4.png",
+      "filename": "screenshot-4.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-5.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-5.png",
+      "filename": "screenshot-5.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-6.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-6.png",
+      "filename": "screenshot-6.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-7.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-7.png",
+      "filename": "screenshot-7.png"
+    },
+    {
+      "original": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/scrape/screenshots/screenshot-8.png",
+      "firebase": "https://storage.googleapis.com/flexpertsdev-pb6ym6.appspot.com/projects/ckbfirmcom-test2/inputs/screenshots/screenshot-8.png",
+      "filename": "screenshot-8.png"
+    }
+  ],
+  "downloadedAt": "2026-02-14T12:16:47.139Z"
+}

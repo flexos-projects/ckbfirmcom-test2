@@ -1,0 +1,52 @@
+{
+  "projectId": "ckbfirmcom-test2",
+  "generatedAt": "2026-02-14T12:18:54.534Z",
+  "summary": {
+    "totalAssets": 1,
+    "harvest": 0,
+    "replace": 0,
+    "ignore": 1
+  },
+  "assets": [
+    {
+      "id": "asset-001",
+      "sourceUrl": "https://www.ckbfirm.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif",
+      "type": "icon",
+      "category": "utility",
+      "filename": "ajax-loader.gif",
+      "fileType": "gif",
+      "foundOnPage": "https://www.ckbfirm.com/?page_id=18",
+      "quality": "high",
+      "authenticity": "unclear",
+      "action": "ignore",
+      "priority": "low",
+      "notes": "Standard AJAX loader GIF from a plugin. This will be replaced by the new website's UI/plugin choices and is not a core brand asset."
+    }
+  ],
+  "photographyBrief": {
+    "needed": true,
+    "shots": [
+      "Professional headshots of all attorneys, suitable for 'Team' and 'About Us' pages",
+      "Team photos in various collaborative settings within the office",
+      "High-quality interior shots of the firm's office space, including conference rooms, reception, and working environments",
+      "Candid shots illustrating the firm's professional yet approachable culture"
+    ],
+    "style": "Modern, authentic, professional, and inviting, emphasizing expertise and client trust.",
+    "priority": "critical"
+  },
+  "stockRecommendations": {
+    "needed": false,
+    "types": [],
+    "style": ""
+  },
+  "generationNeeds": {
+    "images": [
+      {
+        "description": "A comprehensive set of custom icons for each 'Area of Practice' and key service offerings. Icons should be modern, clean, and abstractly represent legal concepts without being generic or cliché.",
+        "purpose": "To visually break up text, improve readability, and enhance the user experience for content-heavy sections like 'Areas of Practice'.",
+        "priority": "high"
+      }
+    ],
+    "videos": []
+  }
+}

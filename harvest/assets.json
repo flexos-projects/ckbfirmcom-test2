@@ -1,6 +1,6 @@
 {
   "projectId": "ckbfirmcom-test2",
-  "generatedAt": "2026-02-14T12:18:54.534Z",
+  "generatedAt": "2026-02-14T12:19:13.436Z",
   "summary": {
     "totalAssets": 1,
     "harvest": 0,
@@ -16,22 +16,22 @@
       "filename": "ajax-loader.gif",
       "fileType": "gif",
       "foundOnPage": "https://www.ckbfirm.com/?page_id=18",
-      "quality": "high",
-      "authenticity": "unclear",
+      "quality": "medium",
+      "authenticity": "stock",
       "action": "ignore",
       "priority": "low",
-      "notes": "Standard AJAX loader GIF from a plugin. This will be replaced by the new website's UI/plugin choices and is not a core brand asset."
+      "notes": "Generic loading spinner from a WordPress plugin. Not a brand asset. Should be replaced by a modern CSS spinner or a custom, branded loading animation during the rebuild."
     }
   ],
   "photographyBrief": {
     "needed": true,
     "shots": [
-      "Professional headshots of all attorneys, suitable for 'Team' and 'About Us' pages",
-      "Team photos in various collaborative settings within the office",
-      "High-quality interior shots of the firm's office space, including conference rooms, reception, and working environments",
-      "Candid shots illustrating the firm's professional yet approachable culture"
+      "Professional headshots and group shots of all attorneys, showcasing professionalism and approachability.",
+      "Interior shots of the firm's office space, including reception areas, meeting rooms, and attorney offices, to convey a professional and welcoming environment.",
+      "Exterior shots of the firm's building/location, if distinctive, to establish a sense of place.",
+      "Candid shots of attorneys collaborating or engaged in work to demonstrate team cohesion and active practice."
     ],
-    "style": "Modern, authentic, professional, and inviting, emphasizing expertise and client trust.",
+    "style": "Modern professional, authentic, well-lit, high-resolution, conveying trustworthiness and expertise without being overly formal or sterile.",
     "priority": "critical"
   },
   "stockRecommendations": {
@@ -42,9 +42,9 @@
   "generationNeeds": {
     "images": [
       {
-        "description": "A comprehensive set of custom icons for each 'Area of Practice' and key service offerings. Icons should be modern, clean, and abstractly represent legal concepts without being generic or cliché.",
-        "purpose": "To visually break up text, improve readability, and enhance the user experience for content-heavy sections like 'Areas of Practice'.",
-        "priority": "high"
+        "description": "Custom icons for 'Areas of Practice' and other service-related sections, designed in a style consistent with the new brand aesthetic.",
+        "purpose": "To visually break up text, enhance readability, and reinforce concepts for service offerings and key firm features.",
+        "priority": "medium"
       }
     ],
     "videos": []
